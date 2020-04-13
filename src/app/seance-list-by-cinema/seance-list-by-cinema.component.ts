@@ -32,7 +32,6 @@ export class SeanceListByCinemaComponent implements OnInit {
     this.film = this.filmService.get(idFilm);
     this.seances = this.seanceService.getAllSeanceByCinemaByFilm(idCinema, idFilm);
 
-    console.log(this.film);
 
   }
 
