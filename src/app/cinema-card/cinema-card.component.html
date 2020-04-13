@@ -1,0 +1,11 @@
+<a [routerLink]="['/films/', cinema.id]" class="link-decoration">
+  <div class="card mr-3 mt-2" style="width: 18rem;">
+    <img class="card-img-top" [src]="'images/' + cinema.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{cinema.nom}}</h5>
+      <p class="card-text">{{cinema.adresse}}</p>
+      <p class="card-text">{{cinema.ville}}</p>
+      <a [routerLink]="['/films/', cinema.id]" class="btn btn-primary">Choisir</a>
+    </div>
+  </div>
+</a>

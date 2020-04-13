@@ -1,0 +1,15 @@
+<div class="row mt-3 ml-2">
+  <div class="col-2 col-md-1">
+    <img style="height: 6rem" [src]="'images/' + film.image" alt="Card image cap">
+  </div>
+  <div class="col-8 col-md-8 ml-3">
+    <h4>{{film.titre}}</h4>
+    <p>Durée: {{film.duree.hours}}h{{film.duree.minutes}}</p>
+    <button type="button" (click)="showSeances()" class="btn btn-outline-primary">Voir les séances</button>
+  </div>
+</div>
+
+
+
+
+
