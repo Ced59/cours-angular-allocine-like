@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   majNbreArticlesPanier() {
-    this.nbreArticlesPanier = this.panier.recupererNbreArticlePanier();
+    this.nbreArticlesPanier = this.panier.getNbreArticlePanier();
     return this.nbreArticlesPanier;
   }
 

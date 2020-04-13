@@ -26,6 +26,8 @@ export class SeancesByFilmInCinemaDisplayComponent implements OnInit {
     this.panier.ajouterPanier(seance);
   }
 
+  //Voulais refactoriser ces methodes pour gestion du temps/dates dans un fichier à part mais pas réussi...
+
   dateFormat(date) {
     moment.locale('fr');
     return moment(date).format('LL');

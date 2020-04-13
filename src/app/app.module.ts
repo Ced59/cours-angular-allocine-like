@@ -17,6 +17,8 @@ import { FilmSelectedComponent } from './seance-list-by-cinema/film-selected/fil
 import { SeancesByFilmInCinemaDisplayComponent } from './seance-list-by-cinema/seances-by-film-in-cinema-display/seances-by-film-in-cinema-display.component';
 import {registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { PanierComponent } from './panier/panier.component';
+import { PayComponent } from './pay/pay.component';
 
 
 registerLocaleData(localeFr, 'fr-FR');
@@ -34,7 +36,9 @@ registerLocaleData(localeFr, 'fr-FR');
     FilmInfoComponent,
     SeanceListByCinemaComponent,
     FilmSelectedComponent,
-    SeancesByFilmInCinemaDisplayComponent
+    SeancesByFilmInCinemaDisplayComponent,
+    PanierComponent,
+    PayComponent
   ],
   imports: [
     BrowserModule,

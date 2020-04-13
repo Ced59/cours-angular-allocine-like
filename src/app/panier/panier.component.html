@@ -1,0 +1,65 @@
+<div *ngIf="seances.length === 0; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h1 class="mt-4">Votre panier est vide! Faut acheter voyons!</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1 class="mt-4">Votre panier</h1>
+
+  <table class="table table-striped mt-4">
+    <thead>
+    <tr>
+      <th>Article N°</th>
+      <th>Cinéma</th>
+      <th>Film</th>
+      <th>Date</th>
+      <th>Heure de début</th>
+      <th>Heure de fin</th>
+      <th>Prix</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let seance of seances; index as id">
+      <td>{{id + 1}}</td>
+      <td>{{seance.cinema.nom}}</td>
+      <td>{{seance.film.titre}}</td>
+      <td>{{dateFormat(seance.datetime)}}</td>
+      <td>{{hourBeginFormat(seance.datetime)}}</td>
+      <td>{{calcEndHour(seance.datetime, seance.film.duree)}}</td>
+      <td>{{seance.prix | currency:'EUR':'symbol':undefined:'fr-FR'}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="5" style="border: none"></td>
+      <td colspan="1">Nombre d'articles</td>
+      <td colspan="1">{{seances.length}}</td>
+    </tr>
+    <tr>
+      <td colspan="5" style="border: none"></td>
+      <td colspan="1">TOTAL HT</td>
+      <td colspan="1">{{getTotalHt() | currency:'EUR':'symbol':undefined:'fr-FR'}}</td>
+    </tr>
+    <tr>
+      <td colspan="5" style="border: none"></td>
+      <td colspan="1">TVA ({{getTauxTVA()}}%)</td>
+      <td colspan="1">{{getTva() | currency:'EUR':'symbol':undefined:'fr-FR'}}</td>
+    </tr>
+    <tr>
+      <td colspan="5" style="border: none"></td>
+      <td colspan="1" style="font-weight: bold">TOTAL TTC</td>
+      <td colspan="1">{{getTotalTtc() | currency:'EUR':'symbol':undefined:'fr-FR'}}</td>
+    </tr>
+    <tr>
+      <td colspan="6" style="border: none"></td>
+      <td colspan="1">
+        <a class="btn btn-primary" routerLink="/pay">
+        <span class="material-icons align-middle">euro_symbol</span> Payer
+        </a>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+</ng-template>

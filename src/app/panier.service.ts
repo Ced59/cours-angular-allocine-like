@@ -17,8 +17,13 @@ export class PanierService {
     this.nbreArticlePanier = this.seances.length;
   }
 
+  getPanier() {
+    return this.seances;
+  }
 
-  recupererNbreArticlePanier() {
+  getNbreArticlePanier() {
     return this.nbreArticlePanier;
   }
+
+
 }
