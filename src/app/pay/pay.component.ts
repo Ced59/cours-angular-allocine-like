@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PanierService} from '../panier.service';
+import {Seance} from '../appInterfaces/seance';
 
 @Component({
   selector: 'app-pay',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PayComponent implements OnInit {
 
-  constructor() { }
+  seances: Seance[];
+
+  constructor(
+    private panier: PanierService
+  ) { }
 
   ngOnInit() {
+    this.seances = this.panier.getPanier();
+  }
+
+  getTotalTtc() {
+    let somme = 0;
+    this.seances.forEach(s => somme += s.prix);
+    return somme;
   }
 
 }

@@ -6,6 +6,7 @@ import { HomeComponent} from './home/home.component';
 import { FilmListComponent} from './film-list/film-list.component';
 import {SeanceListByCinemaComponent} from './seance-list-by-cinema/seance-list-by-cinema.component';
 import {PanierComponent} from './panier/panier.component';
+import {PayComponent} from './pay/pay.component';
 
 
 const routes: Routes = [
@@ -15,14 +16,19 @@ const routes: Routes = [
   { path: 'panier',
     component: PanierComponent
   },
+  { path: 'pay',
+    component: PayComponent
+  },
   { path: 'films/:idCinema/:idFilm',
     component: SeanceListByCinemaComponent
   },
   { path: 'films/:idCinema',
     component: FilmListComponent
   },
-  { path: 'cinemas',      component: CinemaListComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'cinemas',
+    component: CinemaListComponent },
+  { path: '**',
+    component: PageNotFoundComponent }
 ];
 
 @NgModule({

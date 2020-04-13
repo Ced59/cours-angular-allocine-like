@@ -1,0 +1,28 @@
+<form #cardPayForm="ngForm">
+  <div class="form-group">
+    <label for="cardNumber">Numéro de carte</label>
+    <input type="text" class="form-control" id="cardNumber" name="cardNumber" required [(ngModel)]="model.cardNumber">
+  </div>
+
+  <div class="form-group">
+    <label for="cardType">Type de carte</label>
+    <select class="form-control" id="cardType" name="cardType" required [(ngModel)]="model.cardType">
+      <option *ngFor="let type of cardTypes" [value]="type">{{type}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="dateExp">Date d'expiration</label>
+    <input type="date" class="form-control" id="dateExp" name="dateExp" required [(ngModel)]="model.dateExp">
+  </div>
+
+  <div class="form-group">
+    <label for="crypto">Cryptogramme</label>
+    <input type="text" class="form-control" id="crypto" name="crypto" required [(ngModel)]="model.crypto">
+  </div>
+
+  <button type="submit" class="btn btn-success">Payer</button>
+
+  <p class="mt-4">Merci d'entrer vos vraies coordonnées bancaires qui seront envoyées directement à Ced, et en qui vous donnez le droit de les utiliser à son bon vouloir.</p>
+  <p>Nan je déconnes!!!</p>
+</form>

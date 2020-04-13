@@ -19,6 +19,8 @@ import {registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { PanierComponent } from './panier/panier.component';
 import { PayComponent } from './pay/pay.component';
+import { CardPayFormComponent } from './card-pay-form/card-pay-form.component';
+import {FormsModule} from '@angular/forms';
 
 
 registerLocaleData(localeFr, 'fr-FR');
@@ -38,12 +40,14 @@ registerLocaleData(localeFr, 'fr-FR');
     FilmSelectedComponent,
     SeancesByFilmInCinemaDisplayComponent,
     PanierComponent,
-    PayComponent
+    PayComponent,
+    CardPayFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
