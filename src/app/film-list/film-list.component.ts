@@ -14,7 +14,7 @@ import {FilmService} from '../film.service';
 })
 export class FilmListComponent implements OnInit {
 
-  cinema$: Cinema;
+  cinema: Cinema;
   films: Film[];
 
   constructor(
@@ -26,10 +26,10 @@ export class FilmListComponent implements OnInit {
 
   ngOnInit() {
     const id: number = +this.route.snapshot.paramMap.get('idCinema');
-    this.cinema$ = this.cinemaService.get(id);
-    this.films = this.filmService.getAll(id);
+    this.cinema = this.cinemaService.get(id);
+    this.films = this.filmService.getAllFilmsByCinema(id);
 
-    console.log(this.cinema$);
+    console.log(this.cinema);
 
   }
 

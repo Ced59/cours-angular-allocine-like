@@ -12,14 +12,14 @@ export class FilmService {
 
   constructor() { }
 
-  getAll(idCinema): Film[] {
+  getAllFilmsByCinema(idCinema): Film[] {
     // tslint:disable-next-line:only-arrow-functions
     return films.filter(function(film) {
       return film.cinemas.find(cinema => cinema.id === idCinema) !== undefined;
     });
   }
 
-  get(idCinema, idFilm): Film{
+  get(idCinema, idFilm): Film {
 
 
     return null;
