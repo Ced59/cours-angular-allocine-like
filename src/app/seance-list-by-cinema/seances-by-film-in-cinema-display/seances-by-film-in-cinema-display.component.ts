@@ -24,7 +24,6 @@ export class SeancesByFilmInCinemaDisplayComponent implements OnInit {
 
   ajouterPanier(seance) {
     this.panier.ajouterPanier(seance);
-    console.log(this.panier);
   }
 
   dateFormat(date) {

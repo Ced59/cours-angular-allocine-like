@@ -15,7 +15,12 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.nbreArticlesPanier = this.panier.recupererNbreArticlePanier();
   }
+
+  majNbreArticlesPanier() {
+    this.nbreArticlesPanier = this.panier.recupererNbreArticlePanier();
+    return this.nbreArticlesPanier;
+  }
+
 
 }
