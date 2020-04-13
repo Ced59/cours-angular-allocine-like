@@ -15,6 +15,11 @@ import { FilmInfoComponent } from './film-info/film-info.component';
 import { SeanceListByCinemaComponent } from './seance-list-by-cinema/seance-list-by-cinema.component';
 import { FilmSelectedComponent } from './seance-list-by-cinema/film-selected/film-selected.component';
 import { SeancesByFilmInCinemaDisplayComponent } from './seance-list-by-cinema/seances-by-film-in-cinema-display/seances-by-film-in-cinema-display.component';
+import {registerLocaleData} from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+
+registerLocaleData(localeFr, 'fr-FR');
 
 @NgModule({
   declarations: [

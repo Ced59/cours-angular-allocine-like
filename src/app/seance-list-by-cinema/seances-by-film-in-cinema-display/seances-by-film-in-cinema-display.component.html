@@ -1,1 +1,21 @@
-<p>seances-by-film-in-cinema-display works!</p>
+<table class="table table-striped mt-4">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Heure de début</th>
+      <th>Heure de fin</th>
+      <th>Prix</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let seance of seances">
+      <td>{{dateFormat(seance.datetime)}}</td>
+      <td>{{hourBeginFormat(seance.datetime)}}</td>
+      <td>{{calcEndHour(seance.datetime, seance.film.duree)}}</td>
+      <td>{{seance.prix | currency:'EUR':'symbol':undefined:'fr-FR'}}</td>
+      <td><button class="btn btn-primary" (click)="ajouterPanier(seance)"><span class="material-icons align-middle">add_shopping_cart</span> Ajouter au panier</button></td>
+    </tr>
+  </tbody>
+</table>

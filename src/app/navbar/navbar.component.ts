@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PanierService} from '../panier.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  nbreArticlesPanier;
+
+  constructor(
+    private panier: PanierService
+  ) { }
 
   ngOnInit() {
+    this.nbreArticlesPanier = this.panier.recupererNbreArticlePanier();
   }
 
 }
