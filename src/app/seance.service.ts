@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Seance} from './appInterfaces/seance';
 import {seances} from './mock-seances-film-cinema';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +13,21 @@ export class SeanceService {
 
   getAllSeanceByCinemaByFilm(idCinema, idFilm): Seance[] {
 
-    const seancesByCinema = seances.filter(
+    let seancesFiltered = seances.filter(
       s =>
         s.cinema.id === idCinema
     );
 
-    return seancesByCinema.filter(
+    seancesFiltered = seancesFiltered.filter(
       s =>
         s.film.id === idFilm
     );
+
+    seancesFiltered = seancesFiltered.filter(
+      s =>
+        moment().isBefore(s.datetime)
+    );
+
+    return seancesFiltered.sort((a,b) => moment(a.datetime).isBefore(b.datetime)? -1 : 1); //permet de trier par datetime les séances
   }
 }

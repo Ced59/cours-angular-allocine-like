@@ -391,5 +391,42 @@ export const
         },
       datetime: '2020-04-23T15:22:00',
       prix: 9.00
-    }
+    },
+    {
+      id: 9,
+      cinema:
+        {
+          id: 3,
+          nom: 'Ciné de la gare',
+          adresse: 'A coté du café de la gare',
+          ville: 'Pouêt-Ville-Paumée',
+          image: 'photo_cine.jpg'
+        },
+      film:
+        {
+          id: 2,
+          titre: 'La reine des neiges 2',
+          image: 'frozen2.jpg',
+          duree: {hours: 1, minutes: 44},
+          synopsis: 'Pourquoi Elsa est-elle née avec des pouvoirs magiques ? La jeune fille rêve de l’apprendre, mais la réponse met son royaume en danger. Avec l’aide d’Anna, Kristoff, Olaf et Sven, Elsa entreprend un voyage aussi périlleux qu’extraordinaire. Dans La Reine des neiges, Elsa craignait que ses pouvoirs ne menacent le monde. Dans La Reine des neiges 2, elle espère qu’ils seront assez puissants pour le sauver…',
+          cinemas: [
+            {
+              id: 2,
+              nom: 'CIA Ciné',
+              adresse: '66 rue Big Brother',
+              ville: 'Langley',
+              image: 'unnamed.jpg',
+            },
+            {
+              id: 3,
+              nom: 'Ciné de la gare',
+              adresse: 'A coté du café de la gare',
+              ville: 'Pouêt-Ville-Paumée',
+              image: 'photo_cine.jpg',
+            }
+          ]
+        },
+      datetime: '2020-04-12T09:22:00',
+      prix: 9.00
+    },
   ];
