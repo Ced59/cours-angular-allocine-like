@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { films } from './mock-films-cinemas';
-import {Cinema} from './cinema';
-import { Film } from './film';
+import {Cinema} from './appInterfaces/cinema';
+import { Film } from './appInterfaces/film';
 
 
 

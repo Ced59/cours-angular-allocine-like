@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { cinemas } from './mock-cinema';
-import {Cinema} from './cinema';
+import {Cinema} from './appInterfaces/cinema';
 
 
 

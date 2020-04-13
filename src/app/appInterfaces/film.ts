@@ -6,4 +6,5 @@ export interface Film {
   titre: string;
   duree: Time;
   image: string;
+  synopsis: string;
 }

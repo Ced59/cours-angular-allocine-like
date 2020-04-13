@@ -1,4 +1,4 @@
-import { Cinema } from './cinema';
+import { Cinema } from './appInterfaces/cinema';
 
 export const
   cinemas: Cinema[] = [
