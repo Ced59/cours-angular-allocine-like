@@ -1,1 +1,10 @@
-<p>seance-list-by-cinema works!</p>
+<div class="row border border-primary rounded-pill p-3 mb-5 mt-2">
+  <img class="col-2 ml-5" [src]="'images/' + cinema.image" alt={{cinema.nom}}>
+  <div class="col-8">
+    <h1 class="pt-md-1 pt-lg-2">{{cinema.nom}}</h1>
+    <p>{{cinema.adresse}}</p>
+    <p>{{cinema.ville}}</p>
+  </div>
+</div>
+
+<app-film [film]=film></app-film>

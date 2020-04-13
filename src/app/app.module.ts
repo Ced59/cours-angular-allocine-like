@@ -13,6 +13,7 @@ import { CinemaCardComponent } from './cinema-card/cinema-card.component';
 import { FilmListComponent } from './film-list/film-list.component';
 import { FilmInfoComponent } from './film-info/film-info.component';
 import { SeanceListByCinemaComponent } from './seance-list-by-cinema/seance-list-by-cinema.component';
+import { FilmComponent } from './seance-list-by-cinema/film/film.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SeanceListByCinemaComponent } from './seance-list-by-cinema/seance-list
     CinemaCardComponent,
     FilmListComponent,
     FilmInfoComponent,
-    SeanceListByCinemaComponent
+    SeanceListByCinemaComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,
