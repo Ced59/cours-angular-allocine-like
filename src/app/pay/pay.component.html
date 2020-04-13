@@ -1,6 +1,6 @@
 <div class="card mt-3">
   <div class="card-body">
-    <h1 class="card-title">Paiement</h1>
+    <h1 class="card-title">Paiement de {{getTotalTtc() | currency:'EUR':'symbol':undefined:'fr-FR'}}</h1>
       <app-card-pay-form></app-card-pay-form>
   </div>
 </div>
