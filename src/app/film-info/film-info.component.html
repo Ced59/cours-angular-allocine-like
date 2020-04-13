@@ -5,7 +5,7 @@
   <div class="col-3">
     <h4>{{film.titre}}</h4>
     <p>Durée: {{film.duree.hours}}h{{film.duree.minutes}}</p>
-    <button type="button" class="btn btn-outline-primary">Voir les séances</button>
+    <a [routerLink]="['/films/'+ cinema.id + '/' + film.id]" class="btn btn-outline-primary">Voir les séances</a>
   </div>
   <div class="col-7">
     <p class="text-justify">{{film.synopsis}}</p>

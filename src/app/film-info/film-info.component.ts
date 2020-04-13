@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class FilmInfoComponent implements OnInit {
 
   @Input() film;
+  @Input() cinema;
 
   constructor() { }
 

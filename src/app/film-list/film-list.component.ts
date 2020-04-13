@@ -29,8 +29,6 @@ export class FilmListComponent implements OnInit {
     this.cinema = this.cinemaService.get(id);
     this.films = this.filmService.getAllFilmsByCinema(id);
 
-    console.log(this.cinema);
-
   }
 
 }

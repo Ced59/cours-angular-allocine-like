@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { films } from './mock-films-cinemas';
-import {Cinema} from './appInterfaces/cinema';
 import { Film } from './appInterfaces/film';
 
 
@@ -19,7 +18,6 @@ export class FilmService {
   }
 
   get(idCinema, idFilm): Film {
-
 
     return null;
   }
