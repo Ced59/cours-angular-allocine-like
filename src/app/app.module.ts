@@ -23,6 +23,7 @@ import { CardPayFormComponent } from './card-pay-form/card-pay-form.component';
 import {FormsModule} from '@angular/forms';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { CarouselPhotosFilmComponent } from './carousel-photos-film/carousel-photos-film.component';
+import {SwiperModule} from 'ngx-swiper-wrapper';
 
 
 registerLocaleData(localeFr, 'fr-FR');
@@ -51,7 +52,8 @@ registerLocaleData(localeFr, 'fr-FR');
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

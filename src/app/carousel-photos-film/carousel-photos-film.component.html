@@ -1,1 +1,9 @@
-<p>carousel-photos-film works!</p>
+<div class="border border-primary p-3 mb-5">
+  <h2 class="mb-3">Photos: </h2>
+  <swiper [config]="config">
+    <div *ngFor="let photo of film.photos; let index = index" class="swiper-slide cursor-pointer"
+         [ngStyle]="{'text-align':'center'}">
+      <img class="ali" [ngStyle]="{'width.%': 80}" [src]="'images/imagesFilms/' + photo.name" alt="{{photo.name}}">
+    </div>
+  </swiper>
+</div>
