@@ -17,6 +17,8 @@ export class SeanceListByCinemaComponent implements OnInit {
   seances: Seance[];
   film: Film;
   cinema: Cinema;
+  cinemas: Cinema[];
+  seancesOtherCinemas: Cinema[];
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +33,10 @@ export class SeanceListByCinemaComponent implements OnInit {
     this.cinema = this.cinemaService.get(idCinema);
     this.film = this.filmService.get(idFilm);
     this.seances = this.seanceService.getAllSeanceByCinemaByFilm(idCinema, idFilm);
-
+    this.cinemas = this.cinemaService.getAll();
+    this.seancesOtherCinemas = this.cinemas.filter(c =>
+      c.id !== this.seances[0].film.cinemas[idCinema].id
+    );
 
   }
 

@@ -24,6 +24,7 @@ import {FormsModule} from '@angular/forms';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { CarouselPhotosFilmComponent } from './carousel-photos-film/carousel-photos-film.component';
 import {SwiperModule} from 'ngx-swiper-wrapper';
+import { FilmDispoOthersCinemasComponent } from './seance-list-by-cinema/film-dispo-others-cinemas/film-dispo-others-cinemas.component';
 
 
 registerLocaleData(localeFr, 'fr-FR');
@@ -46,7 +47,8 @@ registerLocaleData(localeFr, 'fr-FR');
     PayComponent,
     CardPayFormComponent,
     FilmDetailsComponent,
-    CarouselPhotosFilmComponent
+    CarouselPhotosFilmComponent,
+    FilmDispoOthersCinemasComponent
   ],
   imports: [
     BrowserModule,
