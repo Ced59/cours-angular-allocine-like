@@ -9,6 +9,36 @@ export const
       titre: 'D.A.R.Y.L.',
       image: 'daryl.jpg',
       duree: {hours: 1, minutes: 39},
+      photos: [
+        {
+          id: 0,
+          name: 'daryl1.jpg'
+        },
+        {
+          id: 1,
+          name: 'daryl2.jpg'
+        },
+        {
+          id: 2,
+          name: 'daryl3.jpg'
+        },
+        {
+          id: 3,
+          name: 'daryl4.jpg'
+        },
+        {
+          id: 4,
+          name: 'daryl5.jpg'
+        },
+        {
+          id: 5,
+          name: 'daryl6.jpg'
+        },
+        {
+          id: 6,
+          name: 'daryl7.jpg'
+        }
+      ],
       synopsis: 'Daryl, enfant adopte et heureux, est doué de facultes extraordinaires. Ses qualités surprenantes excitent la convoitise des militaires.',
       cinemas: [
         {
@@ -46,6 +76,36 @@ export const
       titre: 'Ghost',
       image: 'ghost.jpg',
       duree: {hours: 2, minutes: 6},
+      photos: [
+        {
+          id: 7,
+          name: 'ghost1.jpg'
+        },
+        {
+          id: 8,
+          name: 'ghost2.jpg'
+        },
+        {
+          id: 9,
+          name: 'ghost3.jpg'
+        },
+        {
+          id: 10,
+          name: 'ghost4.jpg'
+        },
+        {
+          id: 11,
+          name: 'ghost5.jpg'
+        },
+        {
+          id: 12,
+          name: 'ghost6.jpg'
+        },
+        {
+          id: 13,
+          name: 'ghost7.jpg'
+        }
+      ],
       synopsis: 'Sam Wheat, cadre dans une banque d\'affaires new-yorkaise, et Molly Jensen, sculpteur, s\'aiment. Mais tout bascule lorsque Sam Wheat est agressé dans la rue et abattu. A sa grande surprise, il devient un fantôme et réussit à communiquer avec une voyante hystérique. Il tente alors d\'entrer en contact avec sa femme et découvre qui a voulu le tuer.',
       cinemas: [
         {
@@ -69,6 +129,32 @@ export const
       titre: 'La reine des neiges 2',
       image: 'frozen2.jpg',
       duree: {hours: 1, minutes: 44},
+      photos: [
+        {
+          id: 14,
+          name: 'frozen1.jpg'
+        },
+        {
+          id: 15,
+          name: 'frozen2.jpg'
+        },
+        {
+          id: 16,
+          name: 'frozen3.jpg'
+        },
+        {
+          id: 17,
+          name: 'frozen4.jpg'
+        },
+        {
+          id: 18,
+          name: 'frozen5.jpg'
+        },
+        {
+          id: 19,
+          name: 'frozen6.jpg'
+        }
+      ],
       synopsis: 'Pourquoi Elsa est-elle née avec des pouvoirs magiques ? La jeune fille rêve de l’apprendre, mais la réponse met son royaume en danger. Avec l’aide d’Anna, Kristoff, Olaf et Sven, Elsa entreprend un voyage aussi périlleux qu’extraordinaire. Dans La Reine des neiges, Elsa craignait que ses pouvoirs ne menacent le monde. Dans La Reine des neiges 2, elle espère qu’ils seront assez puissants pour le sauver…',
       cinemas: [
         {
