@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {SeanceService} from '../../seance.service';
 
 @Component({
   selector: 'app-film-dispo-others-cinemas',
@@ -8,10 +9,17 @@ import {Component, Input, OnInit} from '@angular/core';
 export class FilmDispoOthersCinemasComponent implements OnInit {
 
   @Input() cinemas;
+  @Input() idFilm;
 
-  constructor() { }
+  constructor(
+    private seanceService: SeanceService
+  ) { }
 
   ngOnInit() {
+  }
+
+  getNbreSeanceByFilmByCinema(idCinema, idFilm) {
+    return this.seanceService.getNbreSeanceByFilmByCinema(idCinema, idFilm);
   }
 
 }

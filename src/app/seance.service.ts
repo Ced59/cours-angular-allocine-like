@@ -30,4 +30,8 @@ export class SeanceService {
 
     return seancesFiltered.sort((a,b) => moment(a.datetime).isBefore(b.datetime)? -1 : 1); //permet de trier par datetime les séances
   }
+
+  getNbreSeanceByFilmByCinema(idCinema, idFilm) {
+    return this.getAllSeanceByCinemaByFilm(idCinema, idFilm).length;
+  }
 }

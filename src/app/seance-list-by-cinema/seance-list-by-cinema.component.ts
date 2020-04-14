@@ -36,9 +36,6 @@ export class SeanceListByCinemaComponent implements OnInit {
     this.seances = this.seanceService.getAllSeanceByCinemaByFilm(idCinema, idFilm);
     this.cinemas = this.cinemaService.getAll();
 
-    console.log(this.seances);
-    console.log(this.seances[0].film.cinemas.filter(cine => cine.id !== idCinema));
-
     this.seancesOtherCinemas = this.seances[0].film.cinemas.filter(cine => cine.id !== idCinema);
 
   }
