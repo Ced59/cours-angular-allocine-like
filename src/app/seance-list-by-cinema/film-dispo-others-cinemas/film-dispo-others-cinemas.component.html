@@ -1,24 +1,33 @@
-<h4 class="mt-5">Ce film est disponible aussi dans les cinémas suivants:</h4>
+<div *ngIf="cinemas != undefined then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <h4 class="mt-5">Ce film est disponible aussi dans les cinémas suivants:</h4>
 
 
-<table class="table table-striped mt-4 mb-5">
-  <thead>
-  <tr>
-    <th>Image</th>
-    <th>Nom</th>
-    <th>Adresse</th>
-    <th>Ville</th>
-    <th>Nombre de séances programmées</th>
-  </tr>
-  </thead>
+  <table class="table table-striped mt-4 mb-5">
+    <thead>
+    <tr>
+      <th>Image</th>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Ville</th>
+      <th>Nombre de séances programmées</th>
+    </tr>
+    </thead>
 
-  <tbody>
-  <tr *ngFor="let cinema of cinemas">
-    <td><img class="img-thumbnail" [ngStyle]="{'max-width.px': 50}" [src]="'images/' + cinema.image" alt="Card image cap"></td>
-    <td>{{cinema.nom}}</td>
-    <td>{{cinema.adresse}}</td>
-    <td>{{cinema.ville}}</td>
-    <td></td>
-  </tr>
-  </tbody>
-</table>
+    <tbody>
+    <tr *ngFor="let cinema of cinemas">
+      <td><img class="img-thumbnail" [ngStyle]="{'max-width.px': 50}" [src]="'images/' + cinema.image" alt="Card image cap"></td>
+      <td>{{cinema.nom}}</td>
+      <td>{{cinema.adresse}}</td>
+      <td>{{cinema.ville}}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</ng-template>
+<ng-template #elseBlock>
+  <h4>Ce film n'est projeté que dans ce cinéma.</h4>
+</ng-template>
+
+
+

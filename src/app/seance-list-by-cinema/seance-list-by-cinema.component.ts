@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Seance} from '../appInterfaces/seance';
 import {ActivatedRoute} from '@angular/router';
 import {SeanceService} from '../seance.service';
@@ -25,7 +25,8 @@ export class SeanceListByCinemaComponent implements OnInit {
     private cinemaService: CinemaService,
     private filmService: FilmService,
     private seanceService: SeanceService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     const idCinema: number = +this.route.snapshot.paramMap.get('idCinema');
@@ -34,9 +35,11 @@ export class SeanceListByCinemaComponent implements OnInit {
     this.film = this.filmService.get(idFilm);
     this.seances = this.seanceService.getAllSeanceByCinemaByFilm(idCinema, idFilm);
     this.cinemas = this.cinemaService.getAll();
-    this.seancesOtherCinemas = this.cinemas.filter(c =>
-      c.id !== this.seances[0].film.cinemas[idCinema].id
-    );
+
+    console.log(this.seances);
+    console.log(this.seances[0].film.cinemas.filter(cine => cine.id !== idCinema));
+
+    this.seancesOtherCinemas = this.seances[0].film.cinemas.filter(cine => cine.id !== idCinema);
 
   }
 
